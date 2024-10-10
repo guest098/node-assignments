@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Shanmuk",
+    "age": 22,
+    "gender": "Male",
+    "city": "Hyderabad"
+  },
+  {
+    "name": "Gnani",
+    "age": 17,
+    "gender": "Female",
+    "city": "Kurnool"
+  }
+]

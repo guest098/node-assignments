@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="html,css,js">
+    <meta name="description" content="roles project">
+    <meta name="author" content="shanmuk">
+    <title>Roles Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+     <h1 id="title">Welcome to the admin panel</h1>
+     <button type="button" id="addUser">AddUser</button>
+     <div class="div1">
+        <form id="addUserForm" style="display:none;">
+            <label for="username">UserName</label>
+            <input type="text" name="username" id="username" required>
+            <label for="password">Password</label>
+            <input type="text" name="password" id="password" required>
+            <label for="role">Role</label>
+            <select id="role" name="role" required>
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+            <div class="btn-1">
+                <button type="submit" id="saveUser" onclick="submitUser(event)">Submit</button>
+                <button type="button" id="cancel">Cancel</button>
+            </div>
+        </form>
+     </div>
+     <div class="div1">
+        <form id="editUserForm" style="display:none;">
+            <label for="edit_username">UserName</label>
+            <input type="text" name="edit_username" id="edit_username" required>
+            <label for="edit_password">Password</label>
+            <input type="text" name="edit_password" id="edit_password" required>
+            <label for="edit_role">Role</label>
+            <select id="edit_role" name="edit_role" required>
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+            <div class="btn-1">
+                <button type="submit" id="updateUser" onclick="updateUser(event)">Update</button>
+                <button type="button" id="cancelEdit">Cancel</button>
+            </div>
+        </form>
+     </div>
+     <div class="container" id="container">
+     </div>
+    <button type="button" id="addUserRole">Add User Role</button>
+     <div class="div2">
+     <form id="addRoleForm" style="display:none;">
+         <label for="role_name">Role Name</label>
+         <input type="text" id="role_name" name="role_name" required>
+         <label for="department">Department</label>
+         <input type="text" id="department" name="department" required>
+         <label for="responsibilities">Responsibilities</label>
+         <input type="text" id="responsibilities" name="responsibilities" required>
+         <label for="qualifications">Qualifications</label>
+         <input type="text" id="qualifications" name="qualifications" required>
+         <label for="salary">Salary</label>
+         <input type="text" id="salary" name="salary" required>
+         <div class="btn-2">
+             <button type="submit" id="submitRole" onclick="submitRole(event)">Submit</button>
+             <button type="button" id="cancelRole">Cancel</button>
+         </div>
+     </form>
+ </div> 
+ <div class="div2">
+    <form id="editRoleForm" style="display:none;">
+        <label for="edit_role_name">Role Name</label>
+        <input type="text" id="edit_role_name" name="role_name" required>
+        <label for="edit_department">Department</label>
+        <input type="text" id="edit_department" name="department" required>
+        <label for="edit_responsibilities">Responsibilities</label>
+        <input type="text" id="edit_responsibilities" name="responsibilities" required>
+        <label for="edit_qualifications">Qualifications</label>
+        <input type="text" id="edit_qualifications" name="qualifications" required>
+        <label for="edit_salary">Salary</label>
+        <input type="text" id="edit_salary" name="salary" required>
+        <div class="btn-2">
+            <button type="submit" id="updateRole" onclick="updateRole(event)">Update</button>
+            <button type="button" id="cancelEditRole">Cancel</button>
+        </div>
+    </form>
+</div>
+    <div class="container1" id="container1">
+    </div>
+    <button id="showOverviewButton">Show Roles Overview</button>
+    <div class="overview-container" id="overviewContainer" style="display:none;">
+        <h2>Roles Overview</h2>
+        <div class="overview-card">
+            <h3>Total Roles</h3>
+            <p id="total-roles">Loading...</p>
+        </div>
+        <div class="overview-card">
+            <h3>Departments</h3>
+            <ul id="departments-list">Loading...</ul>
+        </div>
+        <div class="overview-card">
+            <h3>Average Salary</h3>
+            <p id="avg-salary">Loading...</p>
+        </div>
+    </div><br>
+    <button id="showAuditTrailButton">Show Roles Audit Trail</button>
+    <section id="roles-audit-trail-section" style="display: none;">
+        <h2>Roles Audit Trail</h2>
+        <div class="table-container">
+            <div id="roles-audit-trail-container">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

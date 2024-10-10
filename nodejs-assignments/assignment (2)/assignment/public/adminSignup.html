@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Signup</title>
+    <style>
+        body{
+            font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+            background:linear-gradient(135deg,#f4f4f4,#e0e0e0);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            margin:0;
+            background:url('uyfydu9.jpg');
+            background-repeat:no-repeat;
+            background-size:cover;
+        }
+        .form-container{
+            background-color:linear-gradient(135deg, #ffffff, #f0f0f0);
+            padding:25px;
+            border-radius:10px;
+            box-shadow: 0 8px 16px rgba(255, 0, 0, 0.922);
+            width:350px;
+            animation:fadeIn is ease-in-out;
+        }
+        @keyframes fadeIn{
+            from{
+                opacity:0;
+                transform:translateY(-10px);
+            }
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+        h2{
+            margin-bottom:25px;
+            text-align:center;
+            color:#333;
+            font-size:24px;
+            font-weight:600;
+        }
+        form{
+            display:flex;
+            flex-direction:column;
+        }
+        label{
+            margin-bottom:8px;
+            font-weight:bold;
+            color:#555;
+        }
+        input{
+            padding:12px;
+            margin-bottom:15px;
+            border:1px solid #ccc;
+            border-radius:6px;
+            font-size:16px;
+            transition:border-color 0.3s;
+        }
+        input:focus{
+            border-color:#007bff;
+            outline:none;
+            box-shadow: 0 8px 16px rgba(255, 0, 0, 0.922);
+        }
+        button{
+            padding:12px;
+            background-color:#1888ff;
+            color:white;
+            border:none;
+            border-radius:6px;
+            cursor:pointer;
+            font-size:16px;
+            font-weight:600px;
+            transition:background-color 0.3s,transform 0.2s;;
+        }
+        button:hover{
+            background-color:#0056b3;
+            transform:scale(1.02);
+        }
+        button:focus{
+            outline:none;
+            box-shadow:0 0 5px rgba(0,123,255,0.5);
+        }
+        .signup_link{
+            margin-top:15px;
+            text-align:center;
+            font-size:14px;
+            color:#555;
+        }
+        .signup_link a{
+            color:#007bff;
+            text-decoration:none;
+            font-weight:bold;
+            margin-left:5px;
+            transition:color 0.3s,text-shadow 0.3s;
+        }
+        .signup_link a:hover{
+            color:#0056b3;
+            text-shadow:0 0 5px rgba(0,123,255,0.5);
+        }
+        .signup_link a:active{
+            color:#003d80;
+        }
+    </style>
+    <script>
+        async function authenticate(event){
+            event.preventDefault();
+            const username=document.getElementById('username').value;
+            const email=document.getElementById('email').value;
+            const password=document.getElementById('password').value;
+            try{
+                const response=await fetch('/admin/signup',{
+                    method:'POST',
+                    headers:{
+                        'Content-Type':'application/json'
+                    },
+                    body:JSON.stringify({username,email,password})
+                });
+                const data=await response.json();
+                console.log(data);
+                if(data.success){
+                    window.location.href='adminlogin.html';
+                }
+                else{
+                    alert('Error occured please retry after sometime');
+                }
+            }
+            catch(error){
+                console.error('Error:', error);
+                alert('Error occurred while processing your request.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <form onsubmit="authenticate(event)">
+            <h2>Admin Signup</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Signup</button>
+        </form>
+        <div class="signup_link">
+            Already have an account? <a href="adminlogin.html">Login here</a>
+        </div>
+    </div>
+</body>
+</html>

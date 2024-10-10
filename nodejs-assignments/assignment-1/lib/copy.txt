@@ -1,0 +1,1 @@
+Hi this i want to copy to new file copy1.txt

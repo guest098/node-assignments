@@ -1,0 +1,4 @@
+Shanmuk|19|Male|Hyderabad
+Gnani|21|Female|Kurnool
+Sai|21|Male|Khamamam
+Krutin|21|Male|Guntur
