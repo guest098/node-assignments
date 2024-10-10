@@ -1,0 +1,160 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial,sans-serif;
+    margin:20px;
+    background-color:#f4f4f4;
+    background-image:url('https://img.freepik.com/premium-photo/key-roles-responsibilities-you-typically-assume-collaborative-team-projects-group-work_1222282-9146.jpg?w=740');
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+button{
+    font-family:Arial,sans-serif;
+    font-size:16px;
+    padding:10px 15px;
+    border:none;
+    cursor:pointer;
+    border-radius:4px;
+}
+#addUser{
+    background-color:#007bff;
+    color:#fff;
+}
+#addUser:hover{
+    background-color:#0056b3;
+}
+.div1{
+    margin-left:550px;
+}
+#addUserForm{
+    background-color:#fff;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 0 10px rgb(106, 31, 31);
+    max-width:400px;
+    margin-top:20px;
+}
+#addUserForm label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+#addUserForm input[type="text"]{
+    width:100%;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius:4px;
+    margin-bottom:15px;
+}
+#addUserForm .btn-1{
+    text-align:center;
+}
+#addUserForm .btn-1 button{
+    background-color:#007bff;
+    margin-left:10px;
+    color:#fff;
+}
+#addUserForm .btn-1 button#cancel{
+    background-color:#6c757d;
+}
+#addUserForm .btn-1 button:hover{
+    opacity:0.9;
+}
+#addUserForm .btn-1 button#cancel:hover{
+    background-color:#5a6268;
+}
+#addUserForm .btn-1 button#submitUser:hover{
+    background-color:#0056b3;
+}
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:20px;
+    justify-content:center;
+}
+.user-container{
+    background-color:#fff;
+    border-radius:8px;
+    box-shadow:0 2px 4px  rgb(228, 13, 13);
+    padding:20px;
+    width:300px;
+    text-align:left;
+    transition:transform 0.2s,box=shadow 0.2s;
+}
+.user-container:hover{
+    transform:translateY(-10px);
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+}
+.user-container h2{
+    margin-top:0;
+    font-size:1.5em;
+    color:rgb(0, 0, 0);
+}
+.user-container p{
+    margin:8px 0;
+    color:#555;
+}
+.user-container button{
+    background-color:#007bff;
+    border:none;
+    border-radius:4px;
+    color:#fff;
+    cursor:pointer;
+    font-size:0.9em;
+    margin:5px;
+    padding:10px 15px;
+    transition:background-color 0.3s;
+}
+.user-container button:hover{
+    background-color:#0056b3;
+}
+.user-container button:nth-of-type(2){
+    background-color:#dc3545;
+}
+.user-container button:nth-of-type(2):hover{
+    background-color:#c82333;
+}
+#editUserForm{
+    background-color:#fff;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 0 10px rgb(106, 31, 31);
+    max-width:400px;
+    margin-top:20px;
+}
+#editUserForm label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+#editUserForm input[type="text"]{
+    width:100%;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius:4px;
+    margin-bottom:15px;
+}
+#editUserForm .btn-1{
+    text-align:center;
+}
+#editUserForm .btn-1 button{
+    background-color:#007bff;
+    margin-left:10px;
+    color:#fff;
+}
+#editUserForm .btn-1 button#cancelEdit{
+    background-color:#6c757d;
+}
+#editUserForm .btn-1 button:hover{
+    opacity:0.9;
+}
+#editUserForm .btn-1 button#cancelEdit:hover{
+    background-color:#5a6268;
+}
+#addUserForm .btn-1 button#updateUser:hover{
+    background-color:#0056b3;
+}

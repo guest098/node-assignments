@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="html,css,js">
+        <meta name="author" content="shanmuk">
+        <meta name="description" content="roles project">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Roles Project</title>
+        <link rel="icon" href="user_1769328.png">
+        <link rel="stylesheet" href="index.css">
+        <script>
+            document.addEventListener('DOMContentLoaded',function(){
+                var adduserButton=document.getElementById('addUser');
+                var addUserForm=document.getElementById('addUserForm');
+                var cancelButton=document.getElementById('cancel');
+                adduserButton.addEventListener('click',function(){
+                    adduserButton.style.display='none';
+                    addUserForm.style.display=addUserForm.style.display==='none'?'block':'none';
+                });
+                cancelButton.addEventListener('click',function(){
+                   addUserForm.style.display='none'; 
+                   adduserButton.style.display='block';
+                });
+                fetch('/roles').then(response=>response.json()).then(users=>fetching(users));
+            });
+        </script>
+    </head>
+    <body>
+        <button type="button" id="addUser">Add User</button>
+        <form id="addUserForm" style="display:none;">
+            <label for="role_name">Role Name</label>
+            <input type="text" name="role_name" id="role_name" required>
+            <label for="department">Department</label>
+            <input type="text" name="department" id="department" required>
+            <label for="responsibilities">Responsibilites</label>
+            <input type="text" name="responsibilities" id="responsibilities" required>
+            <label for="qualifications">Qualifications</label>
+            <input type="text" name="qualifications" id="qualifications" required>
+            <label for="salary">Salary</label>
+            <input type="text" name="salary" id="salary" required>
+            <div class="btn-1">
+                <button type="submit" onclick="submituser(event)" id="submit">Submit</button>
+                <button type="button" id="cancel">Cancel</button>
+            </div>
+        </form>
+    </body>
+</html>

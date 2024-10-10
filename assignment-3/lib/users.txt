@@ -1,0 +1,5 @@
+Name | Age | Gender | City
+Shanmuk | 25 | Male | Hyderabad
+Gnani | 21 | Male | Vizag
+Sai | 25 | Female | Vijayawada
+Deepak | 30 | Male | Delhi

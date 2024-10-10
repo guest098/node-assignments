@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="shanmuk">
+    <meta name="keywords" content="html,css,js">
+    <meta name="description" content="roles project">
+    <title>Document</title>
+    <link rel="icon" href="icons8-roles-80.png">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <button type="button" id="addUser">Add User</button>
+    <div class="div1">
+    <form id="addUserForm" style="display:none;">
+        <label for="role_name">Role Name</label>
+        <input type="text" id="role_name" name="role_name" required>
+        <label for="department">Department</label>
+        <input type="text" id="department" name="department" required>
+        <label for="responsibilities">Responsibilities</label>
+        <input type="text" id="responsibilities" name="responsibilities" required>
+        <label for="qualifications">Qualifications</label>
+        <input type="text" id="qualifications" name="qualifications" required>
+        <label for="salary">Salary</label>
+        <input type="text" id="salary" name="salary" required>
+        <div class="btn-1">
+            <button type="submit" id="submitUser" onclick="submitUser(event)">Submit</button>
+            <button type="button" id="cancel">Cancel</button>
+        </div>
+    </form>
+</div>
+    <div class="div1">
+        <form id="editUserForm" style="display:none;">
+            <label for="edit_role_name">Role Name</label>
+            <input type="text" id="edit_role_name" name="role_name" required>
+            <label for="edit_department">Department</label>
+            <input type="text" id="edit_department" name="department" required>
+            <label for="edit_responsibilities">Responsibilities</label>
+            <input type="text" id="edit_responsibilities" name="responsibilities" required>
+            <label for="edit_qualifications">Qualifications</label>
+            <input type="text" id="edit_qualifications" name="qualifications" required>
+            <label for="edit_salary">Salary</label>
+            <input type="text" id="edit_salary" name="salary" required>
+            <div class="btn-1">
+                <button type="submit" id="updateUser" onclick="updateUser(event)">Update</button>
+                <button type="button" id="cancelEdit">Cancel</button>
+            </div>
+        </form>
+    </div>
+     <div class="container" id="container">
+     </div>
+</body>
+</html>

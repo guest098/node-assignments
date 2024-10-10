@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="html,css,js">
+        <meta name="author" content="shanmuk">
+        <meta name="description" content="file upload">
+        <meta name="viewport" content="initial-scale=1.0,width=device-width">
+        <title>File Upload</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                background-image:url('https://th.bing.com/th/id/OIP.aMVUoW4JQQmvkrR_KDPksQHaFn?w=1772&h=1344&rs=1&pid=ImgDetMain');
+                background-repeat:no-repeat;
+                background-size:cover;
+                font-family:Arial,Helvetica,sans-serif;
+            }
+            .upload-file{
+                background-color:white;
+                width:90%;
+                max-width:400px;
+                padding:20px;
+                border-radius:10px;
+                margin:100px auto;
+                box-shadow:0 4px 8px rgba(0,0,0,0.1);
+                text-align:center;
+            }
+            .upload-file h2{
+                color:blue;
+                margin-bottom:20px;
+            }
+            #fileInput{
+                display:block;
+                margin:20px auto;
+            }
+            #uploadbutton{
+                display:block;
+                width:100px;
+                padding:10px;
+                margin:20px auto;
+                background-color:skyblue;
+                border:none;
+                border-radius:5px;
+                cursor:pointer;
+            }
+            #uploadbutton:hover{
+                background-color:deepskyblue;
+            }
+            .file-link{
+                margin-top:20px;
+            }
+            </style>
+    </head>
+    <body>
+        <div class="upload-file">
+            <h2>Upload the File</h2>
+            <input type="file" id="fileInput"><br>
+            <button id="uploadbutton">Upload</button>
+            <div id="filelink" class="file-link"></div>
+        </div>
+        <script>
+            document.getElementById('uploadbutton').addEventListener('click',()=>{
+                 const fileInput=document.getElementById('fileInput');
+                 const file=fileInput.files[0];
+                 if(!file){
+                    alert('please upload the file');
+                    return;
+                 }
+                 const formdata=new FormData();
+                 formdata.append('file',file);
+                 fetch('./upload',{
+                    method:'POST',
+                    body:formdata
+                 }).then(response=>response.json()).then(data=>{
+                    if(data.success){
+                        const link=document.createElement('a');
+                        link.href=data.fileUrl;
+                        link.innerText='Download File';
+                        document.getElementById('fileInput').innerHTML='';
+                        document.getElementById('filelink').appendChild(link);
+                    }
+                    else{
+                        alert('File Upload failed:'+data.message);
+                    }
+                 }).catch(error=>{
+                    console.error('Error:',error);
+                    alert('An error occurred while uploading the file.');
+                 });
+            });
+            </script>
+    </body>
+</html>

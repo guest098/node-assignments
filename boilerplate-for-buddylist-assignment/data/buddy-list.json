@@ -1,0 +1,37 @@
+[
+    {
+        "userId": 1,
+        "name": "Jon Snow",
+        "profilePicture": "https://th.bing.com/th/id/R.d07e9ae2d39ce8322db04589214dec11?rik=ATfy%2bNuznj3dqg&riu=http%3a%2f%2fcdn.wallpapersafari.com%2f51%2f13%2f5OcUPQ.jpg&ehk=MUFAOT454psmbnOJCehYpjWid7XdW%2bpIicC6hFfu48k%3d&risl=&pid=ImgRaw&r=0",
+        "statusMessage": "We become what we think about!",
+        "presence": 1
+    },
+    {
+        "userId": 2,
+        "name": "Daenerys Targaryen",
+        "profilePicture": "https://preview.redd.it/hlxen8gtwpm01.jpg?width=640&crop=smart&auto=webp&v=enabled&s=a3c43bcbfc1db31d542ef67071559264358b3d2b",
+        "statusMessage": "A positive mindset brings positive things.",
+        "presence": 3
+    },
+    {
+        "userId": 3,
+        "name": "Tyrion Lannister",
+        "profilePicture": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/6a3f5237411193.573f25019c8bf.jpg",
+        "statusMessage": "One small positive thought can change your whole day",
+        "presence": 3
+    },
+    {
+        "userId": 4,
+        "name": "Jaime Lannister",
+        "profilePicture": "https://images.nightcafe.studio/jobs/mWfF1s7OOVg5DMTYiNZ8/mWfF1s7OOVg5DMTYiNZ8--4--qccau.jpg?tr=w-1600,c-at_max",
+        "statusMessage": "I am a rockstar",
+        "presence": 1
+    },
+    {
+        "userId": 5,
+        "name": "Arya Stark",
+        "profilePicture": "https://64.media.tumblr.com/21de4501827aba1c6463ce2ae6a36780/tumblr_ps5le9xxRb1w9a5vgo1_1280.jpg",
+        "statusMessage": "I am using Gradious messenger",
+        "presence": 4
+    }
+]
